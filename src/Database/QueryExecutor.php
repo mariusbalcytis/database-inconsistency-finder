@@ -133,7 +133,7 @@ class QueryExecutor
                     if ($id === false) {
                         break;
                     }
-                    $result[$id]++;
+                    $result[$id] = ($result[$id] ?? 0) + 1;
                 }
             }
         }
