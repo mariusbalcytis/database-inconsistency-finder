@@ -15,37 +15,23 @@ class Interval
      */
     private $until;
 
-    /**
-     * @return int|null
-     */
-    public function getFrom()
+    public function getFrom(): ?int
     {
         return $this->from;
     }
 
-    /**
-     * @param int|null $from
-     * @return $this
-     */
-    public function setFrom($from): self
+    public function setFrom(?int $from): self
     {
         $this->from = $from;
         return $this;
     }
 
-    /**
-     * @return int|null
-     */
-    public function getUntil()
+    public function getUntil(): ?int
     {
         return $this->until;
     }
 
-    /**
-     * @param int|null $until
-     * @return $this
-     */
-    public function setUntil($until): self
+    public function setUntil(?int $until): self
     {
         $this->until = $until;
         return $this;

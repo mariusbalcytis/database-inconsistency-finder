@@ -168,6 +168,6 @@ class QueryExecutor
                 ]
             )
         );
-        return (new Interval())->setFrom($result[0])->setUntil($result[1]);
+        return (new Interval())->setFrom((int)$result[0])->setUntil((int)$result[1]);
     }
 }

@@ -20,18 +20,11 @@ class ReferencesConfiguration
         $this->tableReferencesList = [];
     }
 
-    /**
-     * @return ReferencedColumn
-     */
     public function getReferencedColumn(): ReferencedColumn
     {
         return $this->referencedColumn;
     }
 
-    /**
-     * @param ReferencedColumn $referencedColumn
-     * @return $this
-     */
     public function setReferencedColumn(ReferencedColumn $referencedColumn): self
     {
         $this->referencedColumn = $referencedColumn;

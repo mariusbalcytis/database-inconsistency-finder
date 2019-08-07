@@ -27,7 +27,7 @@ class InconsistenciesResult
         $this->invalidReferenceCounts = [];
     }
 
-    public function areInconsistenciesFound()
+    public function areInconsistenciesFound(): bool
     {
         return (
             count($this->orphanedRecordIds) > 0
@@ -108,7 +108,7 @@ class InconsistenciesResult
         return $this;
     }
 
-    public function includeFrom(InconsistenciesResult $result)
+    public function includeFrom(InconsistenciesResult $result): void
     {
         $this->setMissingReferenceCounts(
             $this->missingReferenceCounts

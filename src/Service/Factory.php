@@ -19,7 +19,7 @@ class Factory
         $this->sizeForJobDistribution = $sizeForJobDistribution;
     }
 
-    public function createInconsistencyFinder(ReferencesConfiguration $referencesConfiguration)
+    public function createInconsistencyFinder(ReferencesConfiguration $referencesConfiguration): InconsistencyFinder
     {
         $queryExecutor = new QueryExecutor();
         $intervalManager = new IntervalManager($this->sizeForSeeking, $this->sizeForJobDistribution);

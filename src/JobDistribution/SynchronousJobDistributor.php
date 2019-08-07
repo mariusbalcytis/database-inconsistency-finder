@@ -18,7 +18,7 @@ class SynchronousJobDistributor implements JobDistributorInterface
         $this->result = new InconsistenciesResult();
     }
 
-    public function perform(Interval $interval)
+    public function perform(Interval $interval): void
     {
         $result = $this->worker->validateConsistency($interval);
         if ($result->areInconsistenciesFound()) {
