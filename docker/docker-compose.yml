@@ -1,0 +1,17 @@
+version: '3'
+services:
+    db:
+        image: "mysql:5.7"
+        command: --default-authentication-plugin=mysql_native_password
+        environment:
+            MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+
+    php:
+        container_name: database_inconsistency_finder_test_php
+        build: .
+        volumes:
+            - ..:/app
+        environment:
+            TEST_DATABASE_HOST: db
+        command: [tail, '-f', /dev/null]
+        working_dir: /app

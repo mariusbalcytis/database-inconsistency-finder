@@ -1,0 +1,36 @@
+{
+    "name": "maba/database-inconsistency-finder",
+    "description": "Library that helps finding inconsistencies between database tables or different databases",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Maba\\DatabaseInconsistencyFinder\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Maba\\DatabaseInconsistencyFinder\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": ">=7.0",
+        "ext-pdo_mysql": "*",
+        "predis/predis": "^1.1",
+        "doctrine/dbal": "2.9.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5",
+        "mockery/mockery": "^1.2",
+        "paysera/lib-php-cs-fixer-config": "^2.2.2"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "scripts": {
+        "phpunit": "phpunit",
+        "fix-cs": "paysera-php-cs-fixer fix",
+        "test-cs": "paysera-php-cs-fixer fix --dry-run -v",
+        "test": ["@phpunit", "@test-cs"]
+    }
+}
